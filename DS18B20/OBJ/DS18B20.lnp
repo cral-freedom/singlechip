@@ -4,6 +4,8 @@
 "..\obj\system_stm32f10x.o"
 "..\obj\adc.o"
 "..\obj\18b20.o"
+"..\obj\onewrite.o"
+"..\obj\ntc.o"
 "..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\usart.o"

@@ -11,8 +11,9 @@ void  DS18B20_GPIO_Config(void);
 void  DS18B20_Mode_IPU(void);
 void  DS18B20_Mode_Out(void);
 void  DS18B20_Rst(void);
-void  DS18B20_Search_Rom(void);
+u8 DS18B20_Search_Rom(void);
 void  DS18B20_Write_Byte(u8 dat);
 float DS18B20_Get_Temp(u8 i);
  
 #endif
+

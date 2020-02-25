@@ -56,6 +56,12 @@ int fputc(int ch, FILE *f)
     USART1->DR = (u8) ch;      
 	return ch;
 }
+
+//__use_no_semihosting was requested, but _ttywrch was 
+_ttywrch(int ch)
+{
+    ch = ch;
+}
 #endif 
 
  

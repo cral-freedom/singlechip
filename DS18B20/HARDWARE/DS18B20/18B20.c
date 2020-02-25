@@ -231,8 +231,8 @@ float DS18B20_Get_Temp(u8 i)
 	return Temperature1;
 }
  
-// 自动搜索ROM
-void DS18B20_Search_Rom(void)
+// 自动搜索ROM,返回传感器个数
+u8 DS18B20_Search_Rom(void)
 {
 	u8 k, l, chongtuwei, m, n, num;
 	//u8 zhan[5];
@@ -292,6 +292,7 @@ void DS18B20_Search_Rom(void)
 				else
 				{
 					//没有搜索到
+					return 0;
 				}
 			}
 			tempp = s;
@@ -299,6 +300,6 @@ void DS18B20_Search_Rom(void)
 		}
 		num = num + 1;// 保存搜索到的个数
 	} while (zhan[l] != 0 && (num < MaxSensorNum));
-	DS18B20_SensorNum = num;
+	return num;
 	//printf("DS18B20_SensorNum=%d\r\n",DS18B20_SensorNum);
 }
